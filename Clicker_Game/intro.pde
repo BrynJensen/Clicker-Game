@@ -1,25 +1,32 @@
 void intro() {
-  background(255, 0, 0);
+  theme.play();
   
-  fill(255);
-  rect(300, 500, 200, 100);
+  background(255);
+    
+  fill(0);
+  textSize(80);
+  text("CLICKER GAME", width/2, height/2 - 50);
+  
+  //tactile
+  if (mouseX > width/2 - 100 && mouseX < width/2 + 100 && mouseY > height/2 + 100 && mouseY < height/2 + 200) {
+  fill(190);
+  } else {
+   fill(255); 
+  }
+  
+  strokeWeight(5);
+  rect(width/2 - 100, height/2 + 100, 200, 100);
   
   fill(0);
   textSize(25);
-  stroke(outline);
-  strokeWeight(5);
-  text("Start Game", 400, 550);
+  text("Start Game", width/2, height/2 + 150);
+
   
-  if (mouseX > 300 && mouseX < 500 && mouseY > 500 && mouseY < 600) {
-  outline = #FFFF00;
-  } else {
-   outline = #000000; 
-  }
   
 }
 
 void introClicks() {
-  if (mouseX > 300 && mouseX < 500 && mouseY > 500 && mouseY < 600) {
+  if (mouseX > width/2 - 100 && mouseX < width/2 + 100 && mouseY > height/2 + 100 && mouseY < height/2 + 200) {
   mode = GAME;
   }
 }
