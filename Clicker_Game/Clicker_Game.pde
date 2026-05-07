@@ -2,7 +2,9 @@
 //Bryn Jensen
 //2-1
 
-//6:46 in 6F, also find game over sound
+//find game over sound, add accuracy based on where clicked on target, multiply accuracy by score for final score
+//add custom font, maybe challenge mode with timer
+//make options screen, highscore on pause screen
 
 import ddf.minim.*;
 import ddf.minim.analysis.*;
@@ -35,7 +37,7 @@ float counter = 0;
 
 //SOUND VARIABLES
 Minim minim;
-AudioPlayer theme, coin, bump;
+AudioPlayer theme, coin, bump, gameover;
 
 void setup() {
   size(800, 800, P2D);
@@ -60,6 +62,8 @@ void setup() {
   theme = minim.loadFile("MUSIC.mp3");
   coin = minim.loadFile("SUCCESS.wav");
   bump = minim.loadFile("FAILURE.wav");
+  theme.loop();
+  //gameover = minim.loadFile(
 }
 
 

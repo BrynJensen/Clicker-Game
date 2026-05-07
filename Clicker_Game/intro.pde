@@ -15,6 +15,7 @@ void intro() {
   }
   
   strokeWeight(5);
+  stroke(0);
   rect(width/2 - 100, height/2 + 100, 200, 100);
   
   fill(0);
