@@ -1,5 +1,5 @@
 void game() {
-  background(0, 0, 255);
+  background(200);
 
 
   //score display
@@ -40,8 +40,10 @@ void game() {
     vy = 0;
     theme.pause();
     if (counter == 120) mode = GAMEOVER;
-  } else {
-    
+  }
+  
+    if (score > highscore) {
+    highscore = score;
   }
 }
 
@@ -50,9 +52,12 @@ void gameClicks() {
     score = score + 1;
     coin.rewind();
     coin.play();
+    vx = vx * 1.05;
+    vy = vy * 1.05;
   } else if (lives != 0 && mouseX <= width - 15 && mouseX >= width - 45 && mouseY <= 50 && mouseY >= 10) {
     mode = PAUSE;
   } else if (lives != 0) {
+    background(220, 0, 0);
     lives = lives - 1;
     bump.rewind();
     bump.play();
