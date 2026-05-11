@@ -8,12 +8,12 @@ void game() {
 
   text("Score: " + score, 60, 40);
   text("Lives: " + lives, 60, 20);
-
+  
   //display target
-  fill(255);
+  fill(f);
   stroke(0);
   strokeWeight(5);
-  image(target, x, y, d, d);
+  circle(x, y, d);
 
   //pause button
   fill(255);

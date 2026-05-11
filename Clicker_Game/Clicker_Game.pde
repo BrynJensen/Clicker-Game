@@ -2,10 +2,10 @@
 //Bryn Jensen
 //2-1
 
-//find game over sound, add accuracy based on where clicked on target, multiply accuracy by score for final score
-//add custom font, maybe challenge mode with timer and no acceleration (new mode)
-//make options screen
+//add custom font
 //speed still seems random
+//add background to make text white
+
 
 import ddf.minim.*;
 import ddf.minim.analysis.*;
@@ -31,6 +31,7 @@ final int OPTIONS = 4;
 float x, y, d; //target position
 float vx, vy; //target velocity
 int score, lives;
+color f = #FF0000; // target colour
 float a = random(0, 2*PI);
 
 //COLOUR PALLETTE
@@ -41,16 +42,24 @@ float counter = 0;
 //HIGHSCORE
 int highscore;
 
+//SLIDER VARIABLES
+float sliderY = height/2 + 575;
+color slide = #000000;
+
 //SOUND VARIABLES
 Minim minim;
 AudioPlayer theme, coin, bump, gameover;
+
+//MOUSE STATE TRACKER
+boolean isDragging = false;
+boolean justPressed = false;
 
 void setup() {
   size(800, 800, P2D);
   mode = INTRO;
   textAlign(CENTER, CENTER);
   imageMode(CENTER);
-  
+
   //TARGET INITIALIZATION
   x = width / 2;
   y = height / 2;
@@ -59,13 +68,14 @@ void setup() {
   vy = 2*sin(a);
   score = 0;
   lives = 3;
-  
+
+
   //HIGHSCORE INITIALIZATION
   highscore = 0;
-  
+
   //IMAGE LOADING
   target = loadImage("target.png");
-  
+
   //minim
   minim = new Minim(this);
   theme = minim.loadFile("MUSIC.mp3");
@@ -90,4 +100,6 @@ void draw() {
   } else {
     println("Error: Mode = " + mode);
   }
+
+  justPressed = false;
 }
