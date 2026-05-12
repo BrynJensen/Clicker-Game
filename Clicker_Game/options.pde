@@ -1,8 +1,8 @@
 void options() {
-  background(200);
+  background(tan);
 
   //options text
-  fill(0);
+  fill(navy);
   textSize(100);
   text("Options", width/2, height - 700);
 
@@ -10,24 +10,24 @@ void options() {
   //MIDDLE
   fill(255);
   squareButton(width/2 - 75, height/2 - 150, 150, 150);
-  fill(255, 0, 0);
+  fill(red);
   circle(width/2, height/2 - 75, 125);
 
   //RIGHT
   fill(255);
   squareButton(width/2 + 125, height/2 - 150, 150, 150);
-  fill(0, 255, 0);
+  fill(navy);
   circle(width/2 + 200, height/2 - 75, 125);
 
   //LEFT
   fill(255);
   squareButton(width/2 - 275, height/2 - 150, 150, 150);
-  fill(0, 0, 255);
+  fill(blue);
   circle(width/2 - 200, height/2 - 75, 125);
 
   //OK BUTTON
   squareButton(width/2 + 125, height - 200, 150, 50);
-  fill(0);
+  fill(navy);
   textSize(25);
   text("OK", width - 200, height - 175);
 
@@ -57,6 +57,7 @@ void options() {
    sliderY = mouseY; 
   }
   
+  d = map(sliderY, height/2 + 175, height/2 + 275, 10, 210);
   
 }
 
@@ -68,16 +69,16 @@ void optionsClicks() {
 
   //MIDDLE CHANGE CLICKED
   if (mouseX > width/2 - 75 && mouseX < width/2 + 75 && mouseY > height/2 - 150 && mouseY < height/2) {
-    f = #FF0000;
+    f = red;
   }
 
   //RIGHT CHANGE CLICKED
   if (mouseX > width/2 + 125 && mouseX < width/2 + 275 && mouseY > height/2 - 150 && mouseY < height/2) {
-    f = #00FF00;
+    f = navy;
   }
 
   //LEFT CHANGE CLICKED
   if (mouseX > width/2 - 275 && mouseX < width/2 - 125 && mouseY > height/2 - 150 && mouseY < height/2) {
-    f = #0000FF;
+    f = blue;
   }
 }

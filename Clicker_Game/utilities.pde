@@ -21,6 +21,6 @@ void tactile(float x, float y, float w, float h) {
 void squareButton(float x, float y, float w, float h) {
   tactile(x, y, w, h);
   strokeWeight(5);
-  stroke(0);
+  stroke(navy);
   rect(x, y, w, h);
 }

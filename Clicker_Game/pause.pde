@@ -2,34 +2,35 @@ void pause() {
 
   // PAUSED TEXT
   fill(255);
-  stroke(0);
+  stroke(navy);
   strokeWeight(5);
   rect(width/2 - 100, height/2 - 50, 200, 100);
   textSize(50);
-  fill(0);
+  fill(navy);
   text("PAUSED", width/2, height/2);
 
-  // RESTART BUTTON
+  // QUIT BUTTON
   squareButton(width/2 - 50, height/2 + 75, 100, 50);
 
   textSize(50);
-  fill(0);
+  fill(navy);
   textSize(20);
   text("RESTART", width/2, height/2 + 100);
 
 
   // OLD PAUSE BUTTON COVER
-  fill(200);
-  stroke(200);
+  fill(tan);
+  stroke(tan);
   strokeWeight(6);
   rect(width - 45, 10, 30, 40);
 
   //NEW PAUSE BUTTON
-  stroke(255);
+  fill(tan);
+  stroke(navy);
   triangle(width - 38, 15, width -38, 45, width - 15, 30);
   
   //HIGHSCORE DISPLAY
-  fill(0);
+  fill(navy);
   textSize(50);
   text("HIGHSCORE: " + highscore, 400, 300);
 }

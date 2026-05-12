@@ -1,5 +1,5 @@
 void gameover() {
-  background(255, 0, 0);
+  background(red);
   fill(255);
   textSize(100);
   text("GAMEOVER", 400, 400);

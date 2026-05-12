@@ -2,9 +2,7 @@
 //Bryn Jensen
 //2-1
 
-//add custom font
-//speed still seems random
-//add background to make text white
+
 
 
 import ddf.minim.*;
@@ -14,7 +12,12 @@ import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 
-
+//COLOUR PALLETTE
+color maroon = #780000;
+color red = #c1121f;
+color tan = #fdf0d5;
+color navy = #003049;
+color blue = #669bbc;
 
 //IMAGE LOADING
 PImage target;
@@ -31,10 +34,8 @@ final int OPTIONS = 4;
 float x, y, d; //target position
 float vx, vy; //target velocity
 int score, lives;
-color f = #FF0000; // target colour
+color f = red; // target colour
 float a = random(0, 2*PI);
-
-//COLOUR PALLETTE
 
 //GAME OVER COUNTER
 float counter = 0;
@@ -82,7 +83,10 @@ void setup() {
   coin = minim.loadFile("SUCCESS.wav");
   bump = minim.loadFile("FAILURE.wav");
   theme.loop();
-  //gameover = minim.loadFile(
+
+  //FONT LOADING
+  PFont font = createFont("Strong.ttf", 200);
+  textFont(font);
 }
 
 

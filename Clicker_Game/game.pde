@@ -1,22 +1,22 @@
 void game() {
-  background(200);
+  background(tan);
 
 
   //score display
-  fill(255);
+  fill(navy);
   textSize(25);
 
-  text("Score: " + score, 60, 40);
-  text("Lives: " + lives, 60, 20);
+  text("Score: " + score, 70, 40);
+  text("Lives: " + lives, 70, 20);
   
   //display target
   fill(f);
-  stroke(0);
+  stroke(navy);
   strokeWeight(5);
   circle(x, y, d);
 
   //pause button
-  fill(255);
+  fill(navy);
   noStroke();
   rect(width - 45, 10, 10, 40);
   rect(width - 25, 10, 10, 40);
