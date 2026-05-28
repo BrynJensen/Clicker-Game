@@ -26,10 +26,10 @@ void game() {
   y = y + vy;
 
   //bouncing
-  if (x < d/2 || x > width - d/2) {
+  if (x < d/2 || x > width - d/2 - 5) {
     vx = vx * -1;
   }
-  if (y < d/2 || y > height - d/2) {
+  if (y < d/2 || y > height - d/2 - 5) {
     vy = vy * -1;
   }
 
@@ -48,7 +48,7 @@ void game() {
 }
 
 void gameClicks() {
-  if (dist(mouseX, mouseY, x, y) < d/2 && lives != 0) {
+  if (dist(mouseX, mouseY, x, y) < d/2 - 5 && lives != 0) {
     score = score + 1;
     coin.rewind();
     coin.play();

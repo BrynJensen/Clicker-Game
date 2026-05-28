@@ -1,8 +1,9 @@
 void reset() {
   lives = 3;
   score = 0;
-  vx = random(-5, 5);
-  vy = random(-5, 5);
+  a = random(0, 2*PI);
+  vx = 2*cos(a);
+  vy = 2*sin(a);
   x = width / 2;
   y = height / 2;
   counter = 0;

@@ -7,9 +7,6 @@ void gameover() {
   //highscore
   textSize(50);
   text("HIGHSCORE: " + highscore, 400, 525);
-
-
-  //gameover.play();
 }
 
 void gameoverClicks() {

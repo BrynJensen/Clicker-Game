@@ -2,9 +2,6 @@
 //Bryn Jensen
 //2-1
 
-
-
-
 import ddf.minim.*;
 import ddf.minim.analysis.*;
 import ddf.minim.effects.*;

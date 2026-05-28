@@ -57,7 +57,7 @@ void options() {
    sliderY = mouseY; 
   }
   
-  d = map(sliderY, height/2 + 175, height/2 + 275, 10, 210);
+  d = map(sliderY, height/2 + 175, height/2 + 275, 15, 210);
   
 }
 
